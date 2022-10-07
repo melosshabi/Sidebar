@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+.navbar{
+    display: flex;
+    /* background-color: rgb(112, 112, 112); */
+    background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%),radial-gradient(circle at 25.99% 27.79%, #ff94fb, transparent 100%),radial-gradient(circle at 50% 50%, #000000, #000000 100%);
+    color:white;
+    font-size:1.3em;
+}
+.mela{
+   margin-left:95%;
+}
+
+.sidebar-btn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:1rem;
+    left:1rem;
+}
+.bar{
+    height: 3px;
+    width: 100%;
+    margin:5px;
+    display: flex;
+    background-color: white;
+}
+.sidebar-btn:hover{
+    cursor: pointer;
+}
+.sidebar{
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(32,32,32);
+    color:white;
+    position: fixed;
+    display: flex;
+    top:0px;
+    left:0px;
+    border-right: 1px solid black;
+    transform: translateX(-100%);
+    transition: transform 500ms;
+}
+.active{
+    transform: translateX(0%);
+}
+#close-btn{
+    position: absolute;
+    right: 2%;
+    top:1%;
+    height: 50px;
+}
+#close-btn:hover{
+    cursor: pointer;
+}
+.sidebar > ul{
+    margin:0;
+    padding: 0;
+    height: 2em;
+    width: 100%;
+    margin-top:30%;
+    font-size:2em;
+    list-style: none;
+}
+.sidebar li{
+    width: 100%;
+    padding-top:10%;
+    padding-bottom:10%;
+    padding-left:15px;
+    line-height: 1.5em;
+    text-align: center;
+    user-select: none;
+    transition: padding-left 300ms, background-color 300ms;
+}
+.sidebar a{
+    text-decoration: none;
+    color:white;
+}
+.sidebar li:hover{
+    padding-left:calc(15px + 3%);
+    cursor: pointer;
+    background-color: rgb(61, 61, 61);
+}
+.sidebar li:active{
+    background-color: rgb(39, 39, 39);
+}
+    
+@media (max-width:768px)
+{
+    body{
+        overflow: hidden;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .sidebar > ul{
+        margin-top:60%;
+        font-size:1em;
+    }
+    .sidebar li{
+        font-size: 1em;
+        line-height: 1em;
+        margin-top: 5px;
+    }
+
+    #close-btn{
+        height: 25px;
+    }
+    .mela{
+        margin-left:85%;
+    }
+
+}
