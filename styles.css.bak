@@ -115,8 +115,5 @@ body{
     .mela{
         margin-left:85%;
     }
-	
-	 .bar{
-        background-color: white;
-    }
+
 }
